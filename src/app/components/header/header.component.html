@@ -1,0 +1,19 @@
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+        <div class="nav">
+            <a class="navbar-brand">CQG</a>
+            <div class="form-check form-switch">
+                <input class="form-check-input"
+                       type="checkbox"
+                       id="flexSwitchCheckDefault"
+                       [ngModel]="isChecked"
+                       (ngModelChange)="toggleMode()">
+                <label class="form-check-label"
+                       for="flexSwitchCheckDefault">Show average
+                </label>
+            </div>
+        </div>
+    </div>
+</nav>
+
+

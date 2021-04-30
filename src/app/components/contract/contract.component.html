@@ -1,0 +1,19 @@
+<!--<div class="card border-success mb-2">-->
+<!--    <div class="card-header">{{contract.name}}</div>-->
+<!--    <div class="card-body text-primary">-->
+<!--        <h5 class="card-title">Primary card title</h5>-->
+<!--        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+<!--    </div>-->
+<!--</div>-->
+
+<div class="card text-white bg-success mb-2">
+    <div class="card-header">{{contract.name}}</div>
+    <div class="card-body">
+<!--        <h5 class="card-title">Success card title</h5>-->
+<!--        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+        <h5 class="card-body_price">${{quote.price}}</h5>
+        <h5 *ngIf="detailedMode" class="card-body_price">
+            Average: {{(((average / quote.price) - 1) * 100).toFixed(2)}} %
+        </h5>
+    </div>
+</div>

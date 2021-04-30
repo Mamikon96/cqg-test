@@ -1,1 +1,77 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css"
+
+*
+    margin: 0
+    padding: 0
+
+html,
+body
+    height: 100%
+
+.wrapper
+    display: flex
+    flex-direction: column
+    min-height: 100%
+
+.container
+    flex: 1 0 auto
+
+.cqg-footer
+    flex: 0 0 auto
+
+
+
+
+.container
+    padding-top: 5rem
+    min-height: 100%
+    position: relative
+
+.navbar
+    position: fixed
+    width: 100%
+    z-index: 3
+
+.nav
+    display: flex
+    flex-direction: row
+
+.navbar-brand
+    padding-right: 2rem
+    font-size: 30px
+
+.form-check.form-switch
+    display: flex
+    justify-content: center
+    align-items: center
+
+.form-check-input
+    margin-right: .5rem
+
+    &:checked
+        background-color: #198754
+
+.form-check-label
+    color: white
+
+.card-body
+    display: flex
+    justify-content: space-between
+
+//.cqg-footer
+//    bottom: 0
+//    width: 100%
+//    position: absolute
+
+.footer
+    margin-top: auto
+    justify-content: center
+    font-size: 16px
+    color: white
+    background-color: #3f51b5
+    position: relative
+    left: 0
+    bottom: 0
+    /*padding: 10px;*/
+    width: 100%
+

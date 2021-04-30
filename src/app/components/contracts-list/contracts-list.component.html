@@ -1,0 +1,51 @@
+<div class="container">
+    <!--    <button class="btn btn-primary" (click)="changePage(page - 1)"><</button>-->
+    <!--    <button class="btn btn-primary" (click)="changePage(page + 1)">></button>-->
+
+    <!--    <nav>-->
+    <!--        <ul class="pagination justify-content-end">-->
+    <!--            <li class="page-item" [class.disabled]="isDisabledPrevPage">-->
+    <!--                <a class="page-link" (click)="changePage(page - 1)" tabindex="-1" aria-disabled="true">Previous</a>-->
+    <!--            </li>-->
+    <!--            <li *ngFor="let arr of pagesArray; let i = index" class="page-item" [class.active]="page === i">-->
+    <!--                <a class="page-link" (click)="changePage(i)">{{i + 1}}</a>-->
+    <!--            </li>-->
+    <!--            <li class="page-item" [class.disabled]="isDisabledNextPage">-->
+    <!--                <a class="page-link" (click)="changePage(page + 1)">Next</a>-->
+    <!--            </li>-->
+    <!--        </ul>-->
+    <!--    </nav>-->
+
+    <ng-container>
+        <div class="ro">
+            <div class="col-md-10 offset-md-1">
+                <mat-paginator [length]="_contracts.length"
+                               [pageSize]="_pageSize"
+                               [pageSizeOptions]="_pageSizeOptions"
+                               [pageIndex]="_pageIndex"
+                               (page)="pageEventHandler($event)">
+                </mat-paginator>
+            </div>
+        </div>
+        <div class="row" *ngFor="let contract of displayedContracts">
+            <div class="col-md-10 offset-md-1">
+                <cqg-contract [contract]="contract"
+                              [quote]="quotes.get(contract.id)"
+                              [average]="averages.get(contract.id)"
+                              [detailedMode]="detailedMode">
+                </cqg-contract>
+            </div>
+        </div>
+        <div class="ro">
+            <div class="col-md-10 offset-md-1">
+                <mat-paginator [length]="_contracts.length"
+                               [pageSize]="_pageSize"
+                               [pageSizeOptions]="_pageSizeOptions"
+                               [pageIndex]="_pageIndex"
+                               (page)="pageEventHandler($event)">
+                </mat-paginator>
+            </div>
+        </div>
+    </ng-container>
+
+</div>
